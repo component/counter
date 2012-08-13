@@ -1,0 +1,11 @@
+{
+  "name": "counter",
+  "description": "Apple style countdown thingy",
+  "version": "0.0.1",
+  "keywords": ["apple", "counter", "count", "ui"],
+  "scripts": ["index.js", "digit.js"],
+  "styles": ["counter.css"],
+  "dependencies": {
+    "component/domify": "*"
+  }
+}
