@@ -62,7 +62,6 @@ Counter.prototype.ensureDigits = function(n){
   while (this._digits.length < n) {
     this.addDigit();
   }
-  this.total = n;
 };
 
 /**
@@ -102,10 +101,9 @@ Counter.prototype.update = function(n){
   this.n = n;
   var str = n.toString();
   var len = str.length;
+  var digits = Math.max(len, this.total);
 
   this.ensureDigits(len);
-  var digits = this.total;
-
   for (var i = 0; i < len; ++i) {
     this.updateDigit(digits - i - 1, str[len - i - 1]);
   }
