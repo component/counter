@@ -99,14 +99,13 @@ Counter.prototype.updateDigit = function(i, val){
 
 Counter.prototype.update = function(n){
   this.n = n;
-  var digits = this.total;
   var str = n.toString();
   var len = str.length;
+  var digits = Math.max(len, this.total);
 
   this.ensureDigits(len);
-
   for (var i = 0; i < len; ++i) {
-    this.updateDigit(digits - i - 1, str[i]);
+    this.updateDigit(digits - i - 1, str[len - i - 1]);
   }
 
   return this;
