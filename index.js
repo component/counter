@@ -106,7 +106,7 @@ Counter.prototype.update = function(n){
   this.ensureDigits(len);
 
   for (var i = 0; i < len; ++i) {
-    this.updateDigit(digits - i - 1, str[i]);
+    this.updateDigit(digits - i - 1, str[len - i - 1]);
   }
 
   return this;
