@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -19,7 +18,7 @@ module.exports = Counter;
  */
 
 function Counter() {
-  this.el = domify('<div class="counter"></div>');
+  this.el = domify('<div class="counter"></div>')[0];
   this._digits = [];
   this.n = 0;
   this.digits(2);
@@ -46,7 +45,7 @@ Counter.prototype.digits = function(n){
  */
 
 Counter.prototype.addDigit = function(){
-  var el = domify(digit);
+  var el = domify(digit)[0];
   this._digits.push(el);
   this.el.appendChild(el);
 };
