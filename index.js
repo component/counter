@@ -18,7 +18,7 @@ module.exports = Counter;
  */
 
 function Counter() {
-  this.el = domify('<div class="counter"></div>')[0];
+  this.el = domify('<div class="counter"></div>');
   this._digits = [];
   this.n = 0;
   this.digits(2);
@@ -45,7 +45,7 @@ Counter.prototype.digits = function(n){
  */
 
 Counter.prototype.addDigit = function(){
-  var el = domify(digit)[0];
+  var el = domify(digit);
   this._digits.push(el);
   this.el.appendChild(el);
 };
